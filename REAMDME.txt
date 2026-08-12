@@ -18,6 +18,6 @@ shared-notes
 + Same idea, but checked in and shared with the team. Visible in the workspace, tracked in git.
 
 templates
-+ Starter files (e.g. TODO.txt) tracked here for everyone to reuse. Copy one into
++ Starter files (e.g. TODO.md) tracked here for everyone to reuse. Copy one into
   personal-notes/ (or the repo root) to get your own working copy — the copy lives
   outside templates/, so it's gitignored automatically and your edits stay local.
