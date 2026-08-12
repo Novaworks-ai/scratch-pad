@@ -1,6 +1,6 @@
 # Ignore everything by default; this repo is a shared allowlist, not a
-# personal dump. Only shared-notes/, templates/, .claude/ skills, and the
-# README are checked in.
+# personal dump. Only shared-notes/, shared-ideas/, templates/, .claude/
+# skills, and the README are checked in.
 *
 
 !.gitignore
@@ -11,3 +11,5 @@
 !templates/**
 !.claude/
 !.claude/**
+!shared-ideas/
+!shared-ideas/**
