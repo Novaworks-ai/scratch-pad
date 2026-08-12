@@ -1,0 +1,8 @@
+# Ignore everything by default; this repo is a shared allowlist, not a
+# personal dump. Only shared-notes/ and the README are checked in.
+*
+
+!.gitignore
+!REAMDME.txt
+!shared-notes/
+!shared-notes/**

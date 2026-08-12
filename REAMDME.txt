@@ -1,0 +1,14 @@
+q3-prds
++ Various files detailing the planned work created for Q3 and forward
+
+personal-notes
++ Local scratch space for collecting inputs with Claude. Gitignored — not checked in, not shared.
+
+shared-notes
++ Same idea, but checked in and shared with the team. Visible in the workspace, tracked in git.
+
+~/nova-all
++ A place where all the source code is checked out for schema generation
+
+Only shared-notes/ and this README are tracked in git — everything else in this repo is gitignored.
+
