@@ -1,0 +1,2 @@
+(A) Install VS Code extension: Todo Tree (Gruntfuggly.todo-tree) +setup
+(B) Install VS Code extension: Pomodoro Timer (lkytal.vscode-pomodoro) +setup

@@ -1,5 +1,15 @@
-q3-prds
-+ Various files detailing the planned work created for Q3 and forward
+# Nova Scratch Pad 
+
+> [NOTE]
+> Unlike traditional repos, everything is gitignored in this, and nothing goes
+> to git by default.  Only shared-notes/, templates/, and this README are tracked in git — everything else in this
+> repo is gitignored. If you want merge a specific folder in the future add the exception in .gitnore.
+
+Use this repo as your local space to create files and work with Claude without
+worrying about them ending up in git. Put personal, throwaway working files
+under personal-notes/ — they stay on your machine only. If something is worth
+the team seeing, put it under shared-notes/ instead so it's tracked and
+visible to everyone in the workspace.
 
 personal-notes
 + Local scratch space for collecting inputs with Claude. Gitignored — not checked in, not shared.
@@ -7,8 +17,7 @@ personal-notes
 shared-notes
 + Same idea, but checked in and shared with the team. Visible in the workspace, tracked in git.
 
-~/nova-all
-+ A place where all the source code is checked out for schema generation
-
-Only shared-notes/ and this README are tracked in git — everything else in this repo is gitignored.
-
+templates
++ Starter files (e.g. TODO.txt) tracked here for everyone to reuse. Copy one into
+  personal-notes/ (or the repo root) to get your own working copy — the copy lives
+  outside templates/, so it's gitignored automatically and your edits stay local.
