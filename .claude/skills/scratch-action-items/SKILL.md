@@ -43,12 +43,15 @@ it to TODO.md if the user still wants a personal placeholder for it.
 
 ## Step 5 — Append to the current week's section
 
-Sections are organized by week (Monday–Sunday), newest week first, headed
-`## Week N (<start date> - <end date>)`. Determine the current week from today's date:
+Sections are organized by the calendar year's ISO week number (Monday–Sunday), newest week
+first, headed `## Week N (<start date> - <end date>)` where N is today's actual ISO week
+number — not a count of sections in the file. Determine today's ISO week number (e.g. `date
++%V`) and its Monday–Sunday date range:
 
-- If a section for the current week already exists, append new items there.
+- If a section for that week number already exists, append new items there.
 - If not, create a new `## Week N` section above the most recent existing one (newest on
-  top), incrementing N from the prior section.
+  top), using the real ISO week number, even if that means skipping numbers from the prior
+  section (e.g. no entries were added in the weeks between).
 
 For each new item, append a line in the existing checklist style: `- [ ] <task>`, adding
 `(Due: <date>)` when a deadline applies. Keep tasks short and action-oriented (verb first).
