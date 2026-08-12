@@ -4,7 +4,7 @@
 *
 
 !.gitignore
-!REAMDME.txt
+!README.md
 !shared-notes/
 !shared-notes/**
 !templates/

@@ -3,7 +3,7 @@
 > [NOTE]
 > Unlike traditional repos, everything is gitignored in this, and nothing goes
 > to git by default.  Only shared-notes/, templates/, and this README are tracked in git — everything else in this
-> repo is gitignored. If you want merge a specific folder in the future add the exception in .gitnore.
+> repo is gitignored. If you want to merge a specific folder in the future, add the exception in .gitignore.
 
 Use this repo as your local space to create files and work with Claude without
 worrying about them ending up in git. Put personal, throwaway working files
