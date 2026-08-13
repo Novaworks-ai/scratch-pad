@@ -61,6 +61,13 @@ item add doesn't need them unless a task is obviously, extremely large.
 surrounding conversation left off — no elaboration, no follow-up questions about
 objectives or pruning.
 
+**f. Watch the very next turn.** If the user's next message starts working the task just
+captured (asking how to do it, drafting it, digging in) rather than moving on, don't just
+follow along — that's the task quietly turning into active work without anyone deciding
+to switch tracks. Ask directly: "Want to actually do this now, or should I leave it on the
+TODO list and keep going?" Only treat it as genuinely new, unrelated work once real
+conversation has happened since the capture.
+
 ---
 
 ## Step 1T — Transcript mode

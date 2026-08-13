@@ -45,6 +45,12 @@ user returns to whatever they were actually doing instead of drifting into idea-
 - If it's genuinely ambiguous (rare — most asks clearly fit one phrasing or the other),
   default to Quick mode. Under-reacting costs one follow-up question; over-reacting
   derails whatever the user was doing.
+- **If a Review mode trigger lands mid-conversation about something else** (not a thread
+  opened specifically for ideas review), don't launch straight into the full flow —
+  confirm first: "Want to switch over to reviewing ideas now, or keep going with what
+  we're doing?" Proceed to Step 1R only once they say they want the switch; otherwise stay
+  on the current thread. A thread that was already dedicated to ideas review (or a direct
+  follow-up within one) doesn't need this check — only the mid-topic interruption does.
 
 ---
 
@@ -80,6 +86,14 @@ turn that sparked this idea>
 
 **e. Confirm in one short line** ("Logged.") and stop — no nudge, no review, no
 suggestion to file it away. Filing, review, and promotion only happen in Review mode.
+
+**f. Watch the very next turn.** If the user's next message elaborates on the idea just
+logged (refining it, asking how to build/compute/design it) rather than moving to
+something unrelated, don't just answer it — that's the idea quietly turning into active
+work without anyone deciding to switch tracks. Ask directly: "Want to actually pursue
+this now, or should I fold that into the IDEAS.md entry and we keep moving?" Only treat
+it as a genuinely new topic once real unrelated conversation has happened since the
+capture.
 
 ---
 
