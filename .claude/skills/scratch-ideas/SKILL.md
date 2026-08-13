@@ -81,6 +81,14 @@ turn that sparked this idea>
 **e. Confirm in one short line** ("Logged.") and stop — no nudge, no review, no
 suggestion to file it away. Filing, review, and promotion only happen in Review mode.
 
+**f. Watch the very next turn.** If the user's next message elaborates on the idea just
+logged (refining it, asking how to build/compute/design it) rather than moving to
+something unrelated, don't just answer it — that's the idea quietly turning into active
+work without anyone deciding to switch tracks. Ask directly: "Want to actually pursue
+this now, or should I fold that into the IDEAS.md entry and we keep moving?" Only treat
+it as a genuinely new topic once real unrelated conversation has happened since the
+capture.
+
 ---
 
 ## Step 1R — Review mode: identify the intent
