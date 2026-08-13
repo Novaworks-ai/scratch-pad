@@ -45,6 +45,12 @@ user returns to whatever they were actually doing instead of drifting into idea-
 - If it's genuinely ambiguous (rare — most asks clearly fit one phrasing or the other),
   default to Quick mode. Under-reacting costs one follow-up question; over-reacting
   derails whatever the user was doing.
+- **If a Review mode trigger lands mid-conversation about something else** (not a thread
+  opened specifically for ideas review), don't launch straight into the full flow —
+  confirm first: "Want to switch over to reviewing ideas now, or keep going with what
+  we're doing?" Proceed to Step 1R only once they say they want the switch; otherwise stay
+  on the current thread. A thread that was already dedicated to ideas review (or a direct
+  follow-up within one) doesn't need this check — only the mid-topic interruption does.
 
 ---
 
