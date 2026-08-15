@@ -1,6 +1,10 @@
 # Team Scratch Pad
 
-> [NOTE]  
+> [!WARNING]
+> **THIS IS A PUBLIC REPOSITORY. **
+> Do NOT use this share ideas private to the organization.  if you want to use this general idea, clone the repo locally, and bootstrap a private repo.
+
+> [!NOTE]
 > Unlike traditional repos, everything is gitignored in this, and nothing goes  
 > to git by default.  Only shared-notes/, shared-ideas/, templates/, and this README are tracked in git — everything else in this  
 > repo is gitignored. If you want to merge a specific folder in the future, add the exception in .gitignore.
