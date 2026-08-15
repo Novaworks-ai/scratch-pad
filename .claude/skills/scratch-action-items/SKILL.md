@@ -49,7 +49,11 @@ bullet Step 5 describes and move straight on. Quick mode never blocks on Objecti
 stated. Carry over a deadline if they mentioned one (`(Due: <date>)`). Skip duplicates
 already in the list (checked or unchecked).
 
-**c. Append each as a line** under that week's `Tasks:` list: `- [ ] <task>`.
+**c. Append each as a line** under that week's `Tasks:` header specifically — find that
+literal `Tasks:` line within the current week's section, then add `- [ ] <task>` at the very
+end of the checklist that follows it (after any existing items and any Transcript-mode
+source sub-headings/groups under it), not anywhere else in the week's section (not above
+`Tasks:`, not inside `Objectives:`, not between an existing sub-heading and its items).
 
 **d. Silently note, don't ask, if a task doesn't map to a stated Objective** — mention it
 in passing in your one-line confirmation (e.g. "neither maps to a stated Objective for
@@ -90,6 +94,13 @@ other named participants; skip vague discussion points that never became a commi
 it's unclear whether an item is the user's, ask rather than guess. Carry over any deadline
 mentioned in the transcript as a `(Due: <date>)` tag on the task line.
 
+Also identify what to call this transcript's source, for Step 7's grouping: a short label
+for who/what the meeting was with (e.g. "Call with Eric" — from participant names or a
+stated meeting title in the transcript), and the meeting's date. Take the date from the
+transcript if it states or implies one (a timestamp, "today is...", a calendar reference);
+otherwise use today's actual date. Don't ask the user for either — infer from the
+transcript, falling back to today's date silently.
+
 ### Step 4 — Flag tasks that are too big for a TODO item
 
 A personal TODO item should be doable in one sitting. If an extracted item reads like a
@@ -125,10 +136,18 @@ surface in Step 8's summary rather than silently letting scope drift go unnotice
 
 ### Step 7 — Append to Tasks
 
-Append each new item as a line in the existing checklist style under that week's `Tasks:`
-list: `- [ ] <task>`, adding `(Due: <date>)` when a deadline applies. Keep tasks short and
-action-oriented (verb first). Before adding, skim the existing list and skip anything
-that's a clear duplicate of what's already there (checked or unchecked).
+Group this transcript's items under a source sub-heading, matching the existing style seen
+in earlier weeks (e.g. `Call with Eric`): add a line `<source label> (<M/D>)` — using
+Step 3's label and date — right before this transcript's checklist lines, with a blank line
+before and after. Don't add a sub-heading for Quick-mode items or for any task with no
+identifiable transcript source; those stay as plain lines directly under `Tasks:`.
+
+Append each new item as a line in the existing checklist style: `- [ ] <task>`, adding
+`(Due: <date>)` when a deadline applies. Keep tasks short and action-oriented (verb first).
+Before adding, skim the existing list and skip anything that's a clear duplicate of what's
+already there (checked or unchecked) — this includes skipping the sub-heading itself if an
+identical one (same source and date) is already present, appending only the new lines
+under it.
 
 ### Step 8 — Suggest pruning if the file has grown too big
 
