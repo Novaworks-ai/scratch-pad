@@ -90,9 +90,11 @@ Take the transcript as pasted text or a file path the user gives you.
 
 Scan for action items assigned to the user specifically — by name, by direct address
 ("can you...", "you'll..."), or items they volunteered for. Skip action items assigned to
-other named participants; skip vague discussion points that never became a commitment. If
-it's unclear whether an item is the user's, ask rather than guess. Carry over any deadline
-mentioned in the transcript as a `(Due: <date>)` tag on the task line.
+other named participants; skip vague discussion points that never became a commitment — a
+discussion point isn't a task, it's an idea, and belongs in IDEAS.md via the companion
+`scratch-ideas` skill instead (see the cross-check note in Step 9). If it's unclear whether
+an item is the user's, ask rather than guess. Carry over any deadline mentioned in the
+transcript as a `(Due: <date>)` tag on the task line.
 
 Also identify what to call this transcript's source, for Step 7's grouping: a short label
 for who/what the meeting was with (e.g. "Call with Eric" — from participant names or a
@@ -161,3 +163,9 @@ decide.
 Show the user the lines you added, which ones (if any) didn't clearly map to a stated
 objective per Step 6, and anything flagged as too-big-for-a-TODO or skipped as a duplicate
 — so they can adjust before moving on.
+
+**Cross-check with `scratch-ideas`.** If Step 3 skipped anything as a vague discussion
+point rather than a commitment, don't silently drop it — mention it here (e.g. "also saw 2
+discussion points that weren't commitments — want me to run scratch-ideas on this
+transcript to log those?"). Don't invoke that skill yourself; just flag it and let the
+user decide.

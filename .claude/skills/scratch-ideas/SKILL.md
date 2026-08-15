@@ -1,18 +1,22 @@
 ---
 name: scratch-ideas
 description: >
-  Has two modes. Quick mode: use when the user drops a bare capture ask — "log this
+  Has three modes. Quick mode: use when the user drops a bare capture ask — "log this
   idea", "I have an idea", "add this to ideas" — into a conversation that's otherwise
   about something else; just logs the idea in one exchange and lets the user get back to
   what they were doing, nothing else. Review mode: use when the user opens a thread
   specifically to work through their ideas — "review ideas", "what ideas am I sitting
   on", "what's been filed", "file this idea away", "promote this idea", "share this idea
   with the team", "kill this idea", "prune ideas", "what's been sitting too long" — and
-  runs the full capture/review/file-away/promote/prune flow ending in a nudge. Personal
-  capture lives in IDEAS.md at the scratch-pad repo root (gitignored, personal — created
-  from templates/IDEAS.md if it doesn't exist yet). Filing an idea away (Review mode
-  only) archives it out of the active view within that same file — it isn't deleted and
-  isn't shared. Promoting an idea is a separate, deliberate act that writes it (with
+  runs the full capture/review/file-away/promote/prune flow ending in a nudge. Transcript
+  mode: use when the user hands over a meeting transcript and wants forward-looking
+  ideas/discussion points pulled out — as opposed to committed action items, which belong
+  to the companion skill scratch-action-items instead. Triggers: "pull out any ideas from
+  this transcript", "what ideas came up in this call", "log the ideas from this meeting".
+  Personal capture lives in IDEAS.md at the scratch-pad repo root (gitignored, personal —
+  created from templates/IDEAS.md if it doesn't exist yet). Filing an idea away (Review
+  mode only) archives it out of the active view within that same file — it isn't deleted
+  and isn't shared. Promoting an idea is a separate, deliberate act that writes it (with
   added context) as its own new file under shared-ideas/, tracked in git and
   team-visible — each promoted idea gets its own file (not an entry in a shared list) so
   it can be read and iterated on independently. This skill has no knowledge of any
@@ -42,6 +46,10 @@ user returns to whatever they were actually doing instead of drifting into idea-
   ("review ideas", "what ideas am I sitting on", "file this idea away", "promote this
   idea", "kill this idea", "prune ideas"), or explicitly asks for anything beyond a bare
   capture. Go to Step 1R.
+- **Transcript mode** — the user hands over a meeting transcript (pasted text or a file)
+  and wants forward-looking ideas or discussion points pulled out — not committed action
+  items with an owner and a next step, which are `scratch-action-items`'s job instead. Go
+  to Step 1I.
 - If it's genuinely ambiguous (rare — most asks clearly fit one phrasing or the other),
   default to Quick mode. Under-reacting costs one follow-up question; over-reacting
   derails whatever the user was doing.
@@ -108,6 +116,43 @@ The user is doing one of five things. Identify which and jump to that step:
 - **Prune** — they want to kill an idea entirely → Step 6
 
 If it's ambiguous, do a quick review (Step 3) to orient, then ask.
+
+---
+
+## Step 1I — Transcript mode: pull ideas out of a meeting
+
+**a. Find or create the target file.**
+The target is `IDEAS.md` at the root of this repo (sibling to `templates/` and
+`shared-ideas/`) — same as the other modes.
+
+**b. Read the transcript.** Take it as pasted text or a file path.
+
+**c. Identify idea-shaped content, not action items.**
+Scan for forward-looking, speculative, or discussion-stage content — "we should think
+about...", "what if we...", a possibility raised but not committed to, a direction worth
+exploring later. Skip anything that's a committed action with an owner and a concrete next
+step ("I'll send you...", "can you follow up on...") — that's a task, not an idea, and
+belongs in TODO.md via `scratch-action-items` instead. See the cross-check note below for
+what to do when you spot one of those.
+
+**d. Capture the source, same as `scratch-action-items`.**
+Identify a short label for who/what the meeting was with and its date (from the transcript
+if stated or implied, otherwise today's date) — you'll use it as the `**Trigger:**` line so
+the idea's origin isn't lost once the conversation is gone.
+
+**e. Append each idea under `## Active`**, using Quick mode's format (Step 1Q.d): title,
+`**Captured:**` (today's date), `**Status:** raw`, and a `**Trigger:**` line built from the
+meeting label + date rather than a "what the thread was doing" description. Skip anything
+that's a clear duplicate of an existing `## Active` or `## Filed` entry.
+
+**f. Cross-check with `scratch-action-items`.**
+If anything you skipped in Step 1I.c reads as a genuine commitment rather than a
+discussion point, don't silently drop it — note it in your confirmation so the user can
+decide whether to also run `scratch-action-items` on the same transcript (e.g. "also saw 2
+items that read like action items, not ideas — want me to run scratch-action-items on this
+transcript too?"). Don't invoke that skill yourself; just flag it.
+
+**g. Confirm** what was logged, and go to Step 7 (nudge).
 
 ---
 
