@@ -5,8 +5,6 @@
 
 !.gitignore
 !README.md
-!shared-notes/
-!shared-notes/**
 !templates/
 !templates/**
 !.claude/
